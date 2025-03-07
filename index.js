@@ -2,9 +2,10 @@ const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 
-const express = express();
+const app = express();
 
-express.use(cors());
+app.use(cors()); 
+app.use(express.json());
 
 const a = 'NzgzMjI5NjM0Mjg2';
 const b = 'YUwB6Q';
@@ -12,15 +13,11 @@ const c = 'vPmvRmNmQab9zOsaY7pc-Q9fppE2dUyK9sG8MI';
 
 const discordToken = `${a}.${b}.${c}`;
 
-express.get("/", async (req, res) => {
-    res.send("");
+app.get('/', (req, res) => {
+    res.send("CORS proxy is running");
 });
 
-express.post('/discord', async (req, res) => {
-    res.send("");
-});
-
-express.get('/discord', async (req, res) => {
+app.get('/discord', async (req, res) => {
     const userId = req.query.userId;
 
     if (!userId) {
@@ -41,6 +38,6 @@ express.get('/discord', async (req, res) => {
     }
 });
 
-express.listen(80, () => {
+app.listen(80, () => {
     console.log("sigh");
 });
