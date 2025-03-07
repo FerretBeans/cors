@@ -7,9 +7,11 @@ const app = express();
 app.use(cors()); 
 app.use(express.json());
 
-const a = 'NzgzMjI5NjM0Mjg2.';
-const b = 'YUwB6Q.';
-const c = 'vPmvRmNmQab9zOsaY7pc-Q9fppE2dUyK9sG8MI';
+
+
+const a = 'MTE1MDA1NzcxMzY2MTkwNzAwNw.';
+const b = 'GLWr3w.';
+const c = '3z5k3_gMo2C08dY4iHXLb7jsFWrJI9qXp5usBU';
 
 app.get('/', (req, res) => {
     res.send("CORS proxy is running");
