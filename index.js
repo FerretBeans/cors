@@ -12,9 +12,15 @@ const c = 'vPmvRmNmQab9zOsaY7pc-Q9fppE2dUyK9sG8MI';
 
 const discordToken = `${a}.${b}.${c}`;
 
-express.get('/discord', async (req, res) => {
-    res.send("hey you're meant to send requests here")
+express.get("/", async (req, res) => {
+    res.send("");
+});
 
+express.post('/discord', async (req, res) => {
+    res.send("");
+});
+
+express.get('/discord', async (req, res) => {
     const userId = req.query.userId;
 
     if (!userId) {
