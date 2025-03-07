@@ -7,8 +7,6 @@ const app = express();
 app.use(cors()); 
 app.use(express.json());
 
-
-
 const a = 'MTE1MDA1NzcxMzY2MTkwNzAwNw.';
 const b = 'GLWr3w.';
 const c = '3z5k3_gMo2C08dY4iHXLb7jsFWrJI9qXp5usBU';
@@ -27,7 +25,7 @@ app.get('/discord', async (req, res) => {
     try {
         const response = await axios.get(`https://discord.com/api/v10/users/${userId}`, {
             headers: {
-                'Authorization': `Bot ${a, b, c}`,
+                'Authorization': `Bot ${a}${b}${c}`,
             },
         });
 
